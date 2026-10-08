@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode / SwiftPM
+.build/
+xcuserdata/
+DerivedData/
+build/
+.swiftpm/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+Package.resolved.bak
+
+# Signing & secrets — never commit
+*.p12
+*.cer
+*.mobileprovision
+*.provisionprofile
+AuthKey_*.p8
+.env
+.env.*
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# git-cliff temp
+# (CHANGELOG.md IS committed — it is generated but versioned)
