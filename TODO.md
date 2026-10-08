@@ -17,7 +17,7 @@ Status legend: `☐` todo · `◐` in progress · `☑` done
 - ☑ git-cliff: `cliff.toml`, generated `CHANGELOG.md`, documented commands
 - ☑ `.gitignore`, `LICENSE` (MIT)
 - ☑ `.github/PULL_REQUEST_TEMPLATE.md`
-- ☑ CI workflow: validate `cliff.toml` (`git-cliff --context`), changelog freshness check, `swift build`/`swift test` (gated until Package.swift exists)
+- ☑ CI workflow: validate `cliff.toml` (`git-cliff --context`), changelog freshness check, `swift build`/`swift test` (build job gated on `Package.swift` — landed with it in PR #2)
 - ☑ Docs: index, product research, competitive landscape, design language, architecture, ADR-0001, permissions, roadmap, development guide, skills, this TODO
 - ☑ Skills installed (see [docs/skills.md](docs/skills.md))
 
@@ -27,7 +27,7 @@ Status legend: `☐` todo · `◐` in progress · `☑` done
 - ☑ `Package.swift`: executable + module targets (`DesignKit`, `WindowEngine`, `IslandUI`), macOS 14 platform, Swift 5.9 (`Services`/`SettingsUI` deferred until their features land)
 - ☑ App entry: `@main` → `setActivationPolicy(.accessory)`; no Dock icon, no main menu
 - ☑ Folder layout matches [docs/architecture §7](docs/architecture.md) (`AppCore`/services wiring arrives with M2)
-- ☐ `swift build && swift test` green in CI on macOS runner *(workflow added; confirm on first PR run)*
+- ☑ `swift build && swift test` green in CI on macOS runner *(confirmed on PR #2, 2026-10-08)*
 - ☐ Verify: launch from terminal → process runs, no Dock icon, quit works *(manual)*
 
 ### Window engine (highest-risk foundation)
