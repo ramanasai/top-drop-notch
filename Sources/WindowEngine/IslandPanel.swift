@@ -19,7 +19,6 @@ public final class IslandPanel: NSPanel {
             backing: .buffered,
             defer: false
         )
-        level = .screenSaver
         collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary, .ignoresCycle]
         isFloatingPanel = true
         hidesOnDeactivate = false
@@ -30,6 +29,9 @@ public final class IslandPanel: NSPanel {
         isOpaque = false
         hasShadow = false // island draws its own continuous shoulders
         animationBehavior = .none // frame morphs are driven explicitly (IslandController)
+        // Must be set LAST: assigning `isFloatingPanel = true` resets the level to
+        // .floating (observed: CG layer 3, below the menu bar, window clamped under it).
+        level = .screenSaver
     }
 
     /// Move/resize to `frame`, animating the morph through AppKit so the window
